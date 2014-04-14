@@ -1,0 +1,92 @@
+// // webfont
+// @import url("http://fonts.googleapis.com/css?family=Lato:400, 300");
+
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, button, ins, kbd, q, s, samp,small, strike,
+strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,fieldset, form, select, input, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+   outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; 
+}
+
+/* HTML5 - Older Browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+
+/* Apply a natural box layout model to all elements */
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+            -o-box-sizing: border-box;
+                box-sizing: border-box;
+ }
+
+/* Responsive video */
+video,
+embed,
+object,
+iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+html {
+  font-size: 100%; 
+  -webkit-text-size-adjust: 100%; 
+  -ms-text-size-adjust: 100%;
+}
+
+html, button, 
+input,input, select,
+option, textarea {
+  font-family: "Lato"; 
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0; 
+  padding: 0; 
+  border: 0; 
+  outline: 0; 
+  font-size: 62.5%; 
+  font-family: "Lato";
+  background: @orange;
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#FF4000), to(#FF7040));
+  background: -webkit-radial-gradient(circle, #FF4000, #FF7040);
+  background: -moz-radial-gradient(circle, #FF4000, #FF7040);
+  background: -ms-radial-gradient(circle, #FF4000, #FF7040);
+}
+
+/* Selected Text */
+::-moz-selection {background: lighten(@orange, 30%); color: @white; text-shadow: none;}
+::selection {background: lighten(@orange, 30%); color: @white; text-shadow: none;}
+
+.chromeframe{background:red; text-align:center; color: @white; padding: 1em 0;margin: 0.5em 0; font-size: 1.5em;}
+
+
+/* Floats */
+.left {
+   float: left;
+   margin-left: 0;
+}
+
+.right {
+   float: right;
+   margin-right: 0;
+}
