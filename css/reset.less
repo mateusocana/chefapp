@@ -1,5 +1,5 @@
-// // webfont
-// @import url("http://fonts.googleapis.com/css?family=Lato:400, 300");
+// webfont
+// @import url("http://fonts.googleapis.com/css?family=Lato:400, 300, 600");
 
 /* CSS Reset */
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, button, ins, kbd, q, s, samp,small, strike,
@@ -9,7 +9,7 @@ figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, su
   padding: 0;
   border: 0;
    outline: 0;
-  font-size: 100%;
+  font-size: 62,5%;
   font: inherit;
   vertical-align: baseline; 
 }
@@ -24,6 +24,8 @@ blockquote:before, blockquote:after,
 q:before, q:after { content: ''; content: none;}
 table {border-collapse: collapse; border-spacing: 0;}
 
+input, select { vertical-align: middle; }
+
 /* Apply a natural box layout model to all elements */
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
@@ -31,6 +33,13 @@ table {border-collapse: collapse; border-spacing: 0;}
             -o-box-sizing: border-box;
                 box-sizing: border-box;
  }
+
+/* Responsive image */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
 
 /* Responsive video */
 video,
@@ -60,6 +69,8 @@ option, textarea {
 }
 
 body {
+  width: 100%;
+  height: 100%;
   margin: 0; 
   padding: 0; 
   border: 0; 
@@ -67,11 +78,62 @@ body {
   font-size: 62.5%; 
   font-family: "Lato";
   background: @orange;
-  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#FF4000), to(#FF7040));
-  background: -webkit-radial-gradient(circle, #FF4000, #FF7040);
-  background: -moz-radial-gradient(circle, #FF4000, #FF7040);
-  background: -ms-radial-gradient(circle, #FF4000, #FF7040);
 }
+
+select, input,
+ textarea, button { 
+  font: 62,5%; 
+}
+pre, code,
+ kbd, samp { 
+  font-family: "Lato";
+}
+
+a:hover, a:active { outline: none; }
+input:focus, textarea:focus {outline:none;}
+/* Remover margens de listas de navegação */
+nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
+
+strong, th { font-weight: bold; }
+td { vertical-align: top; }
+
+/* Setar sub, sup sem afetar o line-height:*/
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+pre {
+  white-space: pre; white-space: pre-wrap; word-wrap: break-word;
+  padding: 15px;
+}
+
+textarea { overflow: auto; } /*remove textarea scrollbars no ie*/
+
+.ie6 legend, .ie7 legend { margin-left: -7px; } 
+
+/* Alinha checkboxes, radios, text inputs com suas labels */
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+
+/* Cursor Pointer */
+label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+
+button, input, select, textarea { margin: 0; }
+
+/* Cores para validar o formulário */
+input:valid, textarea:valid   {  }
+input:invalid, textarea:invalid {
+   border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red;
+}
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+/* Faz os botões se comportarem no IE:*/
+button {  width: auto; overflow: visible; }
+
+/* Bicubic resizing para tamanhos não nativos de IMG:*/
+.ie7 img { -ms-interpolation-mode: bicubic; }
 
 /* Selected Text */
 ::-moz-selection {background: lighten(@orange, 30%); color: @white; text-shadow: none;}

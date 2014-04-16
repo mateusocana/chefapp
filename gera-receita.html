@@ -12,48 +12,43 @@
    <title>Chef App - O quê você vai cozinhar hoje chef?</title>
 
    <!-- metas tags -->
-   <meta name="keywords" content="your, tags"/>
-   <meta name="description" content="150 words"/>
-   <meta name="copyright"content="company name">
-   <meta name="author" content="name, email@yourdomain.com">
+   <meta name="keywords" content="app, receitas, culinária, cozinha, chefe"/>
+   <meta name="description" content="Chef App - Aplicativo de receitas, gere suas receitas com base dos seus ingredientes"/>
+   <meta name="copyright"content="Ocanadesign Agência Interativa">
+   <meta name="author" content="Mateus R. Ocana, mateus@ocanadesign.com.br">
    <meta name="robots" content="index,follow"/>
 
    <!-- metas tags open graph protocol -->
-   <meta property="og:site_name" content="Chef App - O quê você vai cozinhar hoje chef?"/>
+   <meta property="og:site_name" content="Chef App - Receitas | O quê você vai cozinhar hoje chef?"/>
    <meta property="og:type" content="website"/>
    <meta property="fb:admins" content=""/>
    <meta property="og:title" content="Chef App - O quê você vai cozinhar hoje chef?"/>
    <meta property="og:image" content="avatar.png"/>
-   <meta property="og:description" content="Site Descrition"/>
+   <meta property="og:description" content="Chef App - Aplicativo de receitas inteligente, gere suas receitas com base dos seus ingredientes. Baixe agora mesmo o Chef App"/>
    <meta name="og:email" content="email@yourdomain.com"/>
    <meta name="og:phone_number" content="(XX) XXXX-XXXX"/>
+
+    <!-- <meta http-equiv="refresh" content="2" /> -->
 
    <!-- meta viewport -->
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!--    <meta http-equiv="refresh" content="2" />
- -->
-
    <!-- stylesheets -->
-   <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-
+<!--    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+ -->
    <!-- favicons -->
    <link rel="shortcut icon"  type="image/x-icon" href="_images/icons/favicon.png">
-
-   <style>
-      body {background: #FF561E;}
-      .chef-logo {margin-top: 15%; margin-left: auto; margin-right: auto;}
-   </style>
 
    <script type="text/javascript">
      var btn = document.querySelector('.add-input');
      var form = document.querySelector('.ingredients');
 
      btn.addEventListener('click', function(event) {
-      var input = document.createElement('input');
-      form.insertBefore(input, form.firstChild);
+       var input = document.createElement('input');
+       form.insertBefore(input, form.firstChild);
 
-     event.preventDefault();
+       event.preventDefault();
+     
      });
    </script>
 </head>
@@ -63,13 +58,13 @@
       Chef App
     </figure>
 
-      <form class="ingredients" action="#">
+      <h1>Oque você vai <br />cozinhar hoje ?</h1>
+
+      <form class="ingredients" action="receita-gerada.html">
          <input placeholder="Ingrediente:" name="ingredient" type="text">
          <input placeholder="Ingrediente:" name="ingredient" type="text">
-         <input placeholder="Ingrediente:" name="ingredient" type="text">
-         <input placeholder="Ingrediente:" name="ingredient" type="text">
-         <a href="#" class="add-input"></a>
-         <input type="submit" name="action" value="Gerar Receita">
+         <a href="#" class="add-input">+</a>
+         <input type="submit" class="addinput-btn" value="Gerar Receita"/>
       </form>
   </article>
 </body>
